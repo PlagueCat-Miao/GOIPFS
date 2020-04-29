@@ -2,7 +2,7 @@
 你还毕不毕业了( ᖛ ̫ ᖛ )
 ## 上载
 ```
-    cd  \!plague\!cat-\!miao/GOIPFS;git add . ;git commit -m "快速上传"; git push 
+    cd  \!plague\!cat-\!miao/GOIPFS;git add . ;git commit -m "快速上传"; git push origin master 
 
 ```
 ## install
