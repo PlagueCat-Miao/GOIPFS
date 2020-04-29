@@ -34,3 +34,9 @@
 请将 Println 改为 fmt.Printf() \
 [参考链接1] (https://stackoverflow.com/questions/53961617/call-has-possible-formatting-directive)
 
+### 2. go get 报错 : i/o timeout
+一般是代理可以解决 参照[一键解决 go get golang.org/x 包失败](https://www.jianshu.com/p/a537ee63d606)
+
+
+
+
