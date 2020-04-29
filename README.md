@@ -18,10 +18,19 @@
   - 简单: 下载个[main.go]((https://blog.csdn.net/Aaron_Kings/article/details/105256309?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-2)) 开始`go get -u` 
   - 复杂一个一个`git clone`
 4. test
+  - go run main.go
+  - go test -v ipfs_api_test.go
 
 ### 参照贴
 1. [go-ipfs-api在项目中的使用](https://blog.csdn.net/qq_37133717/article/details/83375644)
 2. [ipfs在linux的安装、同步、测试](https://blog.csdn.net/wangkaizheng123/article/details/83089897)
 3. [go-ipfs-api初步使用](https://blog.csdn.net/Aaron_Kings/article/details/105256309?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-2)
-
+4. [go test命令（Go语言测试命令）完全攻略](http://c.biancheng.net/view/124.html)
 ## GetStart
+
+
+## 雷区
+### 1. 报错 : "Println call has possible formatting directive %v"
+请将 Println 改为 fmt.Printf() \
+[参考链接1] (https://stackoverflow.com/questions/53961617/call-has-possible-formatting-directive)
+

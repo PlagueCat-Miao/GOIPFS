@@ -1,4 +1,4 @@
-package main
+package IpfsAPI
 
 import (
 	"bytes"
@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 
 	shell "github.com/ipfs/go-ipfs-api"
+    "testing"
 )
 
 var sh *shell.Shell
@@ -58,12 +59,14 @@ func unmarshalStruct(str []byte) Transaction {
 	var transaction Transaction
 	err := json.Unmarshal(str, &transaction)
 	if err != nil {
-		fmt.Println("unmarshal err=%v", err)
+		fmt.Printf("unmarshal err=%v", err)
 	}
 	return transaction
 }
 
-func main() {
+func TestIpfsAPI(t *testing.T) {
+	t.Log("Hellcat: IpfsAPI测试")
+	t.Log("测试内容：网友json序列化 上传/下载")
 	//生成一个交易结构体(未来的通道)
 	transaction := Transaction{
 		Person1:      "Aaron",
@@ -83,4 +86,6 @@ func main() {
 
 	//验证下数据
 	fmt.Println(transaction2)
+	t.Log("Hellcat: IpfsAPI 测试结束")
+
 }
