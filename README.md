@@ -42,9 +42,13 @@
 请将 Println 改为 fmt.Printf() \
 [参考链接1] (https://stackoverflow.com/questions/53961617/call-has-possible-formatting-directive)
 
-### 2. go get 报错 : i/o timeout
-一般是代理可以解决 参照[一键解决 go get golang.org/x 包失败](https://www.jianshu.com/p/a537ee63d606)
-window 有些特殊 [windows下解决 go get golang.org/x 包失败](https://www.jianshu.com/p/663b2dbf55ce)
+### 2. 解决 go get 被墙问题
+- 一般报错：
+  - connectex: A connection attempt failed because the connected party did not properly 。。。 
+  - i/o timeout
+- 解决方案  _GOPROXY = "https://goproxy.io"_
+  - liunx 参照[一键解决 go get golang.org/x 包失败](https://www.jianshu.com/p/a537ee63d606)
+  - window 有些特殊 [windows下解决 go get golang.org/x 包失败](https://www.jianshu.com/p/663b2dbf55ce)
 ### 3. go get -u 报错  go get .: /xxxx is not a package in module rooted at /XXXX
 一般是你的这个项目没写main 或者没有GO文件。go get 无法建立依赖树 （子目录有GO文件不算）
 通过在文件下go build 可以达成同样的效果
