@@ -30,7 +30,13 @@
 4. [go test命令（Go语言测试命令）完全攻略](http://c.biancheng.net/view/124.html)
 ## GetStart
 
-
+## 墓碑
+### Makefile
+ - [Makefile介绍](https://wiki.ubuntu.org.cn/%E8%B7%9F%E6%88%91%E4%B8%80%E8%B5%B7%E5%86%99Makefile:MakeFile%E4%BB%8B%E7%BB%8D)
+ - [Makefile 使用总结](https://www.cnblogs.com/wang_yb/p/3990952.html)
+   - 我们的GO项目中基本都是伪目标 
+### window 配置GO
+[win配置GO教程](https://blog.csdn.net/youshijian99/article/details/81782875)
 ## 雷区
 ### 1. 报错 : "Println call has possible formatting directive %v"
 请将 Println 改为 fmt.Printf() \
