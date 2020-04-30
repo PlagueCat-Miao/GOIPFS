@@ -1,11 +1,11 @@
 all :
 	make cloud
-	make edgelayer
+	make edge
 	make netsever
 
 cloud :
 
-edgelayer :
+edge :
 
 netsever :
 
