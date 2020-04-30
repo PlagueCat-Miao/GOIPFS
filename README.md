@@ -63,6 +63,7 @@
  - 参考链接
    - [MySQL - 数据库设计（表之间的 3 种关联关系）](https://blog.csdn.net/Dream_Weave/article/details/85172796)
    - [用MySQL Workbench为一对多，多对多的关系创建外键关联](https://blog.csdn.net/qq_32808253/article/details/78941625)
+
 ### GO
 #### panic
 - 介绍 
@@ -89,8 +90,16 @@
 ### 3. go get -u 报错  go get .: /xxxx is not a package in module rooted at /XXXX
 一般是你的这个项目没写main 或者没有GO文件。go get 无法建立依赖树 （子目录有GO文件不算）
 通过在文件下go build 可以达成同样的效果
- 
+#### 4. MySQL导入出现问题：Unknowncollation:utf8mb4_0900_ai_ci 
+- 报错原因：
 
+   生成转储文件的数据库版本为8.0,要导入sql文件的数据库版本为5.6,因为是高版本导入到低版本，引起1273错误
+- 解决方法：
+
+   打开sql文件，将文件中的所有
+`utf8mb4_0900_ai_ci`替换为`utf8_general_ci` \
+`utf8mb4`替换为`utf8` \
+保存后再次运行sql文件，运行成功
 ## 扩展阅读
 ### 负载均衡
 [Keepalived之——Keepalived + Nginx 实现高可用 Web 负载均衡](https://blog.csdn.net/l1028386804/article/details/72801492)

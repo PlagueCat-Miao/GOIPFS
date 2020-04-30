@@ -21,7 +21,7 @@
 
 DROP TABLE IF EXISTS `cloud`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+ SET character_set_client = utf8 ;
 CREATE TABLE `cloud` (
   `Dhash` varchar(45) NOT NULL COMMENT 'ipfs网络下，用户的id哈希',
   `status` int(11) NOT NULL DEFAULT '3' COMMENT '身份：\\n1. edge\\n2. gateway\\n3. cloud\\n4. other',
@@ -29,7 +29,7 @@ CREATE TABLE `cloud` (
   `capacity` int(11) NOT NULL DEFAULT '500' COMMENT '总容量 （MB）',
   `remain` int(11) NOT NULL DEFAULT '400' COMMENT '剩余容量(MB)',
   PRIMARY KEY (`Dhash`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci COMMENT='云层';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci COMMENT='云层';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -48,7 +48,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `edge`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+ SET character_set_client = utf8 ;
 CREATE TABLE `edge` (
   `Dhash` varchar(45) NOT NULL COMMENT 'ipfs网络下，用户的id哈希',
   `status` int(11) NOT NULL DEFAULT '1' COMMENT '身份：\\n1. edge\\n2. gateway\\n3. cloud\\n4. other',
@@ -56,7 +56,7 @@ CREATE TABLE `edge` (
   `capacity` int(11) NOT NULL DEFAULT '500' COMMENT '总容量 （MB）',
   `remain` int(11) NOT NULL DEFAULT '400' COMMENT '剩余容量(MB)',
   PRIMARY KEY (`Dhash`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci COMMENT='边缘层';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci COMMENT='边缘层';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -74,7 +74,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `gateway`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+ SET character_set_client = utf8 ;
 CREATE TABLE `gateway` (
   `Dhash` varchar(45) NOT NULL COMMENT 'ipfs网络下，用户的id哈希',
   `status` int(11) NOT NULL DEFAULT '2' COMMENT '身份：\\n1. edge\\n2. gateway\\n3. cloud\\n4. other',
@@ -82,7 +82,7 @@ CREATE TABLE `gateway` (
   `capacity` int(11) NOT NULL DEFAULT '500' COMMENT '总容量 （MB）',
   `remain` int(11) NOT NULL DEFAULT '400' COMMENT '剩余容量(MB)',
   PRIMARY KEY (`Dhash`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci COMMENT='网关层';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci COMMENT='网关层';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -100,7 +100,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `ownership`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+ SET character_set_client = utf8 ;
 CREATE TABLE `ownership` (
   `Dhash` varchar(45) NOT NULL COMMENT '用户哈希值',
   `Fhash` varchar(45) NOT NULL COMMENT '文件哈希值',
@@ -108,7 +108,7 @@ CREATE TABLE `ownership` (
   KEY `FDASH_idx` (`Fhash`),
   CONSTRAINT `Dhash` FOREIGN KEY (`Dhash`) REFERENCES `cloud` (`Dhash`),
   CONSTRAINT `FDASH` FOREIGN KEY (`Fhash`) REFERENCES `video` (`Fhash`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci COMMENT='视频存储情况';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci COMMENT='视频存储情况';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -127,7 +127,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `video`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+ SET character_set_client = utf8 ;
 CREATE TABLE `video` (
   `Uhash` int(11) NOT NULL COMMENT 'IPFS网络中，up主的id哈希值',
   `Fhash` varchar(45) NOT NULL COMMENT 'IPFS网络中，文件哈希值',
@@ -135,7 +135,7 @@ CREATE TABLE `video` (
   `time` int(11) NOT NULL COMMENT '上传时间戳',
   PRIMARY KEY (`Fhash`),
   UNIQUE KEY `ipfshash_UNIQUE` (`Fhash`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci COMMENT='视频文件登记表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci COMMENT='视频文件登记表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
