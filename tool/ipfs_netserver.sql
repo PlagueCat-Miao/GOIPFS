@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.16, for Win64 (x86_64)
 --
--- Host: localhost    Database: ipfs_netsever
+-- Host: localhost    Database: ipfs_netserver
 -- ------------------------------------------------------
 -- Server version	8.0.15
 
@@ -157,4 +157,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-30 16:19:49
+-- Dump completed on 2020-04-30 18:03:03
