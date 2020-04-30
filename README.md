@@ -100,6 +100,8 @@
 `utf8mb4_0900_ai_ci`替换为`utf8_general_ci` \
 `utf8mb4`替换为`utf8` \
 保存后再次运行sql文件，运行成功
+- 参考链接:\
+ <http://blog.sina.com.cn/s/blog_591c97810102yszr.html>
 ## 扩展阅读
 ### 负载均衡
 [Keepalived之——Keepalived + Nginx 实现高可用 Web 负载均衡](https://blog.csdn.net/l1028386804/article/details/72801492)
