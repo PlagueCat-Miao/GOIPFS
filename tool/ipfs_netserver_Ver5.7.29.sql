@@ -29,7 +29,7 @@ CREATE TABLE `cloud` (
   `capacity` int(11) NOT NULL DEFAULT '500' COMMENT '总容量 （MB）',
   `remain` int(11) NOT NULL DEFAULT '400' COMMENT '剩余容量(MB)',
   PRIMARY KEY (`Dhash`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='云层';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci COMMENT='云层';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -56,7 +56,7 @@ CREATE TABLE `edge` (
   `capacity` int(11) NOT NULL DEFAULT '500' COMMENT '总容量 （MB）',
   `remain` int(11) NOT NULL DEFAULT '400' COMMENT '剩余容量(MB)',
   PRIMARY KEY (`Dhash`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='边缘层';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci COMMENT='边缘层';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -82,7 +82,7 @@ CREATE TABLE `gateway` (
   `capacity` int(11) NOT NULL DEFAULT '500' COMMENT '总容量 （MB）',
   `remain` int(11) NOT NULL DEFAULT '400' COMMENT '剩余容量(MB)',
   PRIMARY KEY (`Dhash`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='网关层';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci COMMENT='网关层';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -108,7 +108,7 @@ CREATE TABLE `ownership` (
   KEY `FDASH_idx` (`Fhash`),
   CONSTRAINT `Dhash` FOREIGN KEY (`Dhash`) REFERENCES `cloud` (`Dhash`),
   CONSTRAINT `FDASH` FOREIGN KEY (`Fhash`) REFERENCES `video` (`Fhash`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='视频存储情况';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci COMMENT='视频存储情况';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -135,7 +135,7 @@ CREATE TABLE `video` (
   `time` int(11) NOT NULL COMMENT '上传时间戳',
   PRIMARY KEY (`Fhash`),
   UNIQUE KEY `ipfshash_UNIQUE` (`Fhash`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='视频文件登记表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci COMMENT='视频文件登记表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
