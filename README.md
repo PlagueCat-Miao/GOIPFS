@@ -133,6 +133,9 @@
  - Makefile 变量获取shell的值 `VAL = $(shell xxxx)`
  - 使用Makefile变量 `$(VAL)` 使用shell系统变量 `$$VAL`
  - [makefile中的shell调用---注意事项](https://blog.csdn.net/frank_jb/article/details/81708832)
+#### 7.不要把编译后、过程、可执行文件 上传
+他们很大 7MB能传一下午
+
 ## 扩展阅读
 ### 负载均衡
 [Keepalived之——Keepalived + Nginx 实现高可用 Web 负载均衡](https://blog.csdn.net/l1028386804/article/details/72801492)
