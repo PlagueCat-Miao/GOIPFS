@@ -1,0 +1,10 @@
+{
+  "user":"hellcat",
+  "password":"12345678",
+  "targetdb" :"cloud",
+  "Dhash" : "QmABC",
+  "status" : "3",
+  "ip" : "127.0.0.1",
+  "capacity" : "400",
+  "remain" :"300"
+}

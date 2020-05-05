@@ -3,6 +3,7 @@ module github.com/!plague!cat-!miao/GOIPFS
 go 1.13
 
 require (
+	github.com/gin-gonic/gin v1.6.3
 	github.com/go-sql-driver/mysql v1.5.0
 	github.com/ipfs/go-ipfs-api v0.0.3
 	github.com/ipfs/go-ipfs-files v0.0.8 // indirect

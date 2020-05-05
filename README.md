@@ -1,7 +1,10 @@
 # GOIPFS
 你还毕不毕业了( ᖛ ̫ ᖛ )
 ## 下载
-`git pull origin master  `
+``` 
+    cd $GOPATH/src/github.com/\!plague\!cat-\!miao/GOIPFS;git pull origin master;git diff  
+
+```
 ## 上载
 ```
     cd $GOPATH/src/github.com/\!plague\!cat-\!miao/GOIPFS;git add . ;git commit -m "快速上传"; git push origin master 
@@ -63,7 +66,11 @@
  - 参考链接
    - [MySQL - 数据库设计（表之间的 3 种关联关系）](https://blog.csdn.net/Dream_Weave/article/details/85172796)
    - [用MySQL Workbench为一对多，多对多的关系创建外键关联](https://blog.csdn.net/qq_32808253/article/details/78941625)
-
+###MySQL 变量
+- @局部 @@全局
+- 变量只能一列
+- [MySQL中变量的定义和变量的赋值使用](https://www.cnblogs.com/EasonJim/p/7966918.html)
+- 在GO中，会忘记局部变量
 ### GO
 #### panic
 - 介绍 
@@ -75,6 +82,22 @@
 - [Go异常处理 ](https://www.cnblogs.com/baiyuxiong/p/4770980.html) \
 #### map
 [go map 基本操作](https://www.cnblogs.com/bingzhen/p/10503967.html)
+#### bo build忽略某些文件
+文件开始处加`// +build ignore` \
+使得外路经的go build时 会忽略这个文件
+### http
+####请求方式 GET POST
+-[GET,POST,PUT,DELETE,OPTIONS等请求方式简单总结](https://blog.csdn.net/zhenwei1994/article/details/84399999)
+#### POST的方法
+- 下载工具 curl 
+   ``` liunx                                                                               
+         curl -X POST http://localhost:8080/loginJSON -H 'content-type:application/json' -d '{"user":"manu","password":"123"}'
+  ```
+- 下载工具 POSTMAN
+  - Collection - request - Hearder - +content-type~application/json
+  - Collection - request - Body - raw - +{xxjsonxx}
+  - send
+  - [postman 发送json请求](https://blog.csdn.net/weixin_37569048/article/details/81456561)
 ## 雷区
 ### 1. 报错 : "Println call has possible formatting directive %v"
 请将 Println 改为 fmt.Printf() \
@@ -102,6 +125,9 @@
 保存后再次运行sql文件，运行成功
 - 参考链接:\
  <http://blog.sina.com.cn/s/blog_591c97810102yszr.html>
+#### 5. go build 
+一定要先写参数（如：输出路径），最后写编译文件（一般还可不写）\
+例如`go build -o ../../output/MySql.exe  MySqlUp.go`
 ## 扩展阅读
 ### 负载均衡
 [Keepalived之——Keepalived + Nginx 实现高可用 Web 负载均衡](https://blog.csdn.net/l1028386804/article/details/72801492)

@@ -1,13 +1,17 @@
 all :
 	make cloud
 	make edge
-	make netsever
+	make gateway
 
 cloud :
 
 edge :
 
-netsever :
+gateway :
 
+MySql :
+	cd $GOPATH/src/github.com/\!plague\!cat-\!miao/GOIPFS/Db/MySql
+	go build -o ../../output/MySql.exe  MySqlUp.go
+	cd ../..
 clean :
 	rm -rf ./output
