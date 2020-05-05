@@ -128,6 +128,11 @@
 #### 5. go build 
 一定要先写参数（如：输出路径），最后写编译文件（一般还可不写）\
 例如`go build -o ../../output/MySql.exe  MySqlUp.go`
+#### 6. makefile 中shell语法
+ - makefile  每一行作一个独立的单元，它们在单独的进程中 。所以连续shell语句需要同行 或用`\回车` 连接
+ - Makefile 变量获取shell的值 `VAL = $(shell xxxx)`
+ - 使用Makefile变量 `$(VAL)` 使用shell系统变量 `$$VAL`
+ - [makefile中的shell调用---注意事项](https://blog.csdn.net/frank_jb/article/details/81708832)
 ## 扩展阅读
 ### 负载均衡
 [Keepalived之——Keepalived + Nginx 实现高可用 Web 负载均衡](https://blog.csdn.net/l1028386804/article/details/72801492)

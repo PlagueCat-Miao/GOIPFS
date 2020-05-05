@@ -1,3 +1,4 @@
+OS_NAME = $(shell go env GOOS)
 all :
 	make cloud
 	make edge
@@ -10,8 +11,8 @@ edge :
 gateway :
 
 MySql :
-	cd $GOPATH/src/github.com/\!plague\!cat-\!miao/GOIPFS/Db/MySql
-	go build -o ../../output/MySql.exe  MySqlUp.go
-	cd ../..
+	cd $GOPATH/src/github.com/\!plague\!cat-\!miao/GOIPFS/Db/MySql; \
+	go build -o ../../output/MySql_$(OS_NAME)  MySqlUp.go
+
 clean :
 	rm -rf ./output
