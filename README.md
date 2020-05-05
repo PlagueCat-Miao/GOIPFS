@@ -102,7 +102,6 @@
 ### 1. 报错 : "Println call has possible formatting directive %v"
 请将 Println 改为 fmt.Printf() \
 [参考链接1] (https://stackoverflow.com/questions/53961617/call-has-possible-formatting-directive)
-
 ### 2. 解决 go get 被墙问题
 - 一般报错：
   - connectex: A connection attempt failed because the connected party did not properly 。。。 
@@ -113,7 +112,7 @@
 ### 3. go get -u 报错  go get .: /xxxx is not a package in module rooted at /XXXX
 一般是你的这个项目没写main 或者没有GO文件。go get 无法建立依赖树 （子目录有GO文件不算）
 通过在文件下go build 可以达成同样的效果
-#### 4. MySQL导入出现问题：Unknowncollation:utf8mb4_0900_ai_ci 
+### 4. MySQL导入出现问题：Unknowncollation:utf8mb4_0900_ai_ci 
 - 报错原因：
 
    生成转储文件的数据库版本为8.0,要导入sql文件的数据库版本为5.6,因为是高版本导入到低版本，引起1273错误
@@ -125,15 +124,15 @@
 保存后再次运行sql文件，运行成功
 - 参考链接:\
  <http://blog.sina.com.cn/s/blog_591c97810102yszr.html>
-#### 5. go build 
+### 5. go build 
 一定要先写参数（如：输出路径），最后写编译文件（一般还可不写）\
 例如`go build -o ../../output/MySql.exe  MySqlUp.go`
-#### 6. makefile 中shell语法
+### 6. makefile 中shell语法
  - makefile  每一行作一个独立的单元，它们在单独的进程中 。所以连续shell语句需要同行 或用`\回车` 连接
  - Makefile 变量获取shell的值 `VAL = $(shell xxxx)`
  - 使用Makefile变量 `$(VAL)` 使用shell系统变量 `$$VAL`
  - [makefile中的shell调用---注意事项](https://blog.csdn.net/frank_jb/article/details/81708832)
-#### 7.不要把编译后、过程、可执行文件 上传
+### 7.不要把编译后、过程、可执行文件 上传
 他们很大 7MB能传一下午
 
 ## 扩展阅读
