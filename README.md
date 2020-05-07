@@ -2,12 +2,12 @@
 你还毕不毕业了( ᖛ ̫ ᖛ )
 ## 下载
 ``` 
-    cd $GOPATH/src/github.com/\!plague\!cat-\!miao/GOIPFS;git pull origin master;git diff  
+    cd $GOPATH/src/github.com/PlagueCat-Miao/GOIPFS;git pull origin master;git diff  
 
 ```
 ## 上载
 ```
-    cd $GOPATH/src/github.com/\!plague\!cat-\!miao/GOIPFS;git add . ;git commit -m "快速上传"; git push origin master 
+    cd $GOPATH/src/github.com/PlagueCat-Miao/GOIPFS;git add . ;git commit -m "快速上传"; git push origin master 
 
 ```
 ## install
@@ -92,7 +92,7 @@
 - 下载工具 curl 
    ``` liunx                                                                               
          curl -X POST http://localhost:8080/loginJSON -H 'content-type:application/json' -d '{"user":"manu","password":"123"}'
-  ```
+   ```
 - 下载工具 POSTMAN
   - Collection - request - Hearder - +content-type~application/json
   - Collection - request - Body - raw - +{xxjsonxx}
