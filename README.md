@@ -17,7 +17,7 @@
   - [go-ipfs编译](https://github.com/ipfs/go-ipfs)
   - [IPFS终端下载](https://github.com/ipfs/go-ipfs/releases)
 2. 安装 API
-  1. [github搜索go-ipfs-api](https://github.com/ipfs?q=api&type=&language=)
+  1. [github搜索go-ipfs-api][]
   2. 于本地$GOPATH下安装
 3. 更新一下依赖
   - 简单: 下载个[main.go]((https://blog.csdn.net/Aaron_Kings/article/details/105256309?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-2)) 开始`go get -u` 
@@ -158,3 +158,5 @@
   2. mysql master收到dump请求，开始推送binary log给slave(也就是canal)
   3. canal解析binary log对象(原始为byte流)
 - [canal实现mysql数据实时同步es](https://blog.csdn.net/zhangcongyi420/article/details/105176534?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-1)
+
+
